@@ -55,8 +55,8 @@ try{
 <p>データ件数：<?php echo $count;?>件</p>
 
 <div class="container">
-/*  (1)ここに適切な formタグを追加してください  */
-
+</-- (1)ここに適切な formタグを追加してください -->
+<form action="edit.php" method="post" class="row">
 <table border=1>
     <tr><th>id</th><th>名前</th><th>メールアドレス</th><th>性別</th><th>選択対象</th></tr>
     <?php foreach($data as $row): ?>
@@ -76,8 +76,8 @@ try{
         ?>
     </td>
     <td>
-        /*  (2)ここにラジオボタン表示処理を追加して下さい  */
-
+        </--  (2)ここにラジオボタン表示処理を追加して下さい   -->
+        <label><input type="radio" name="edit" id="edit" value="<?php echo $row['id'];?>">選択</label>
     </td>
     </tr>
     <?php endforeach; ?>
